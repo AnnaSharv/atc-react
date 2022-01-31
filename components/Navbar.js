@@ -73,7 +73,7 @@ function Navbar({children}) {
                     router.pathname == "/support" ? "active" : ""
                   } ${`nav-link`}`}
                 >
-                  <Link href="/support">Support</Link>
+                  <Link href="/">Support</Link>
                 </li>
               </ul>
             </div>
@@ -95,7 +95,7 @@ function Navbar({children}) {
                   marginLeft: 4 + "px",
                 }}
               >
-                <a exact to="settings.html">
+                
                   <Image
                     src="/assets/settings.svg"
                     alt="settings"
@@ -103,7 +103,7 @@ function Navbar({children}) {
                     height={14}
                     style={{ marginBottom: 5 + "px" }}
                   />
-                </a>
+                
               </div>
               <div className="days-black-btn">
                 <Image

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Script from "next/script";
 import "bootstrap/dist/css/bootstrap.css";
-import "../styles/globals.css";
+import style from "../styles/globals.css";
 import Navbar from "../components/Navbar.js";
 
 
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           />
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
           <script type="text/javascript" src="scripts/d3.v3.js"></script>
@@ -30,13 +30,13 @@ function MyApp({ Component, pageProps }) {
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
 
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
           referrerpolicy="no-referrer"
         />
       </>

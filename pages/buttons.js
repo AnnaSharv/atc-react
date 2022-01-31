@@ -134,7 +134,7 @@ function buttons() {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
           integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
           referrerpolicy="no-referrer"
         />
       </Head>
@@ -145,7 +145,7 @@ function buttons() {
             className="nav flex-column nav-pills my-sidebar-left"
             id="v-pills-tab"
             role="tablist"
-            aria-orientation="vertical"
+            // aria-orientation="vertical"
           >
             <button
               className="nav-link active my-sidebar-link"
@@ -154,8 +154,8 @@ function buttons() {
               data-bs-target="#v-pills-home"
               type="button"
               role="tab"
-              aria-controls="v-pills-home"
-              aria-defaultValue="true"
+              // aria-controls="v-pills-home"
+              // aria-defaultValue="true"
             >
               <img src="assets/settings.svg" alt="settings"></img> General
             </button>
@@ -166,8 +166,8 @@ function buttons() {
               data-bs-target="#v-pills-profile"
               type="button"
               role="tab"
-              aria-controls="v-pills-profile"
-              aria-defaultValue="false"
+              // aria-controls="v-pills-profile"
+              // aria-defaultValue="false"
             >
               <img src="assets/buttons.svg" alt="settings"></img>Buttons
             </button>
@@ -178,8 +178,8 @@ function buttons() {
               data-bs-target="#v-pills-messages"
               type="button"
               role="tab"
-              aria-controls="v-pills-messages"
-              aria-defaultValue="false"
+              // aria-controls="v-pills-messages"
+              // aria-defaultValue="false"
             >
               <img src="assets/positions.svg" alt="settings"></img> Positions
             </button>
@@ -190,8 +190,8 @@ function buttons() {
               data-bs-target="#v-pills-settings"
               type="button"
               role="tab"
-              aria-controls="v-pills-settings"
-              aria-defaultValue="false"
+              // aria-controls="v-pills-settings"
+              // aria-defaultValue="false"
             >
               <img src="assets/quantity.svg" alt="settings"></img> Timer
             </button>
@@ -202,8 +202,8 @@ function buttons() {
               data-bs-target="#v-pills-media"
               type="button"
               role="tab"
-              aria-controls="v-pills-settings"
-              aria-defaultValue="false"
+              // aria-controls="v-pills-settings"
+              // aria-defaultValue="false"
             >
               <img src="assets/media.svg" alt="media"></img> Media
             </button>
@@ -214,8 +214,8 @@ function buttons() {
               data-bs-target="#v-pills-css"
               type="button"
               role="tab"
-              aria-controls="v-pills-settings"
-              aria-defaultValue="false"
+              // aria-controls="v-pills-settings"
+              // aria-defaultValue="false"
             >
               <img src="assets/customcss.svg" alt="css"></img> Custom CSS
             </button>
@@ -347,7 +347,7 @@ function buttons() {
 
                   <div className="dropdown-div">
                     <label htmlFor="select">Others (Optional):</label>
-                    <form className="checkboxes checkboxes-optional" multiple>
+                    <div className="checkboxes checkboxes-optional" multiple>
                       <div className="form-check mb-1">
                         <input
                           className="form-check-input shadow-none"
@@ -390,7 +390,7 @@ function buttons() {
                           Calculate clicks
                         </label>
                       </div>
-                    </form>
+                    </div>
                   </div>
                 </fieldset>
               </form>

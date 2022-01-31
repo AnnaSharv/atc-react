@@ -189,9 +189,9 @@ function analytics() {
             </div>
           </div>
 
-          <div id="chart">
-            <svg></svg>
-          </div>
+          {/* <div id="chart">
+            
+          </div> */}
         </section>
       </main>
     </div>
