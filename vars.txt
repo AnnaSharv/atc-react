@@ -1,0 +1,127 @@
+var for BLACK NAV WIDGET
+
+let daysLeft
+_______________________
+
+variables for DASHBOARD PAGE
+
+let dashBoardSelect
+
+let totalClicks
+let remainingClicks
+let myWidgets
+
+let widgetStatus
+let sortBy
+let plotTwist
+
+let tableItemNumber
+let tableItemName
+let tableItemLocation
+let tableItemDescription
+let tableItemStatus
+let tableItemClicks
+let tableItemDataCreated
+_____________________
+
+variables for ANALYTICS PAGE
+
+let analyticsChooseYourWidget
+let analyticsCompareWith
+
+let RCfirstSpanLeft
+let RCfirstSpanRight
+let TCsecondSpanLeft
+let TCsecondSpanRight
+let TRthirdSpanLeft
+let TRthirdSpanRight
+
+topProductsInfo
+topProductsQuantity
+topProductsRevenue
+
+
+// aq aklia charti da kalendaris cvladebi
+______________________________
+variables for BUTTONS SETTINGS PAGE
+
+- Enabled/Disabled
+
+name="saveData"
+name="showEnabled"
+
+
+- General
+name="widgetName"
+name="pagesToShow"
+name="style"
+name="showOnPageScroll" ----> {progressBar}
+name="showStatusDesktop"
+name="showStatusMobile"
+name="ifSkipCart"
+name="ifEnableInstantLoad"
+name="ifCalculateClicks"
+
+
+- Buttons
+-----Settings-----
+let "checkedOnMobile" ---> showOnMobile
+
+let "showProductImage"
+let "showProductName"
+let "showPrice"
+let "showVariants"
+let "showQuantity"
+let "showOutOfStocks"
+
+-----Border settings-----
+name="borderBackgroundColor"
+name="borderHeight"
+name="borderAnimation"
+name="borderSpeedOfAnimation"
+let "showLoopAnimation"
+
+-----Button-----
+name="buttonButtonColor"
+name="buttonButtonShape"
+name="buttonButtonText"
+
+
+
+-Positions
+name="widgetPosition"
+name="barAlignment"
+
+
+-Timer
+
+name="showUrgencyTime"
+name="timerStyle"
+name="timerChooseEvent"
+name="timerText"
+name="timerBackgroundColor"
+name="timerTextSize"
+name="timerTextColor"
+name="timerFont"
+
+
+-Media
+
+name="showMediaIcons"
+name="showMediaIconsFacebook"
+name="showMediaIconsInstagram"
+name="showMediaIconsTwitter"
+name="showMediaIconsGoogle"
+name="showMediaIconsLinkedin"
+name="showMediaIconsPinterest"
+name="showMediaIconsTumblr"
+
+-Custom CSS
+
+name="showCustomCSS"
+name="customCssText"
+
+
+
+
+
