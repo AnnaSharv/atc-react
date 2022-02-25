@@ -30,13 +30,13 @@ function analytics() {
           type="text/css"
           media="all"
         />
-        <link
+        {/* <link
           rel="stylesheet"
           id="rangecalendar-style-css"
           href="scripts/nv.d3.css"
           type="text/css"
           media="all"
-        />
+        /> */}
 
         <script src="js/jquery-ui.min.js"></script>
         <script
@@ -48,14 +48,22 @@ function analytics() {
           type="text/javascript"
           src="js/jquery.rangecalendar.js"
         ></script>
-       
       </Head>
 
       <main style={{ padding: 30 + "px" }}>
         <section className="analytics-section-1">
           <div>
             <div className="dropdown-div">
-              <span>Choose Your Widget</span>
+              <span>
+                Choose Your Widget
+                <Image
+                  src="/assets/info.svg"
+                  alt="info"
+                  width={14}
+                  height={14}
+                  className="img"
+                />
+              </span>
               <select
                 id="analyticsChooseYourWidget"
                 className="form-select my-select shadow-none bg-light"
@@ -71,19 +79,28 @@ function analytics() {
               </select>
             </div>
             <div className="dropdown-div">
-              <span>Compare With</span>
+              <span>
+                Compare With
+                <Image
+                  src="/assets/info.svg"
+                  alt="info"
+                  width={14}
+                  height={14}
+                  className="img"
+                />
+              </span>
               <select
                 id="analyticsCompareWith"
                 className="form-select my-select shadow-none bg-light"
                 aria-label="Default select example"
               >
                 <option defaultValue>Sticky Widget</option>
-                <option value="1">Sticky cart</option>
+                {/* <option value="1">Sticky cart</option>
                 <option value="2">Sticky cart preview</option>
                 <option value="3">Quick buy widget</option>
                 <option value="1">Sticky URL button</option>
                 <option value="2">Remember my cart</option>
-                <option value="3">Festival attraction</option>
+                <option value="3">Festival attraction</option> */}
               </select>
             </div>
           </div>
@@ -143,18 +160,7 @@ function analytics() {
                 </div>
                 Total Clicks
               </div>
-              <div>
-                <div>
-                  <span className="span-blue" id="TRthirdSpanLeft">
-                    765
-                  </span>
-                  &nbsp;/&nbsp;
-                  <span className="span-purple" id="TRthirdSpanRight">
-                    465$
-                  </span>
-                </div>
-                Total Revenue
-              </div>
+              
             </div>
           </div>
 

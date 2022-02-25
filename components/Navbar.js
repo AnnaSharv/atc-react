@@ -101,7 +101,7 @@ function Navbar({children}) {
                     alt="settings"
                     width={12}
                     height={14}
-                    style={{ marginBottom: 5 + "px" }}
+                    // style={{ marginBottom: 5 + "px" }}
                   />
                 
               </div>

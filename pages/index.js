@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from "next/image";
 import Table from "react-bootstrap/Table";
+import Link from 'next/link'
 import React, {useState, useEffect} from 'react';
 
 
@@ -71,9 +72,17 @@ export default function Home() {
                 <option value="2">Remember my cart</option>
                 <option value="3">Festival attraction</option>
               </select>
-              <button type="button" className="btn create-btn shadow-none">
-                Create
-              </button>
+              <Link href="/button/create">
+               <a> <button type="button" className="btn create-btn shadow-none">
+                  Create
+                </button></a>
+              </Link>
+              {/* <Link href="/button/:id">
+              <a> <button type="button" className="btn create-btn shadow-none">
+                  Save
+                </button></a>
+              </Link> */}
+             
             </div>
           </div>
 
@@ -140,7 +149,7 @@ export default function Home() {
                     alt="dots"
                     width={12}
                     height={18}
-                    style={{ opacity: 0.4, paddingRight: 8 + "px" }}
+                   
                     className="dotz"
                   />
                 </th>
@@ -169,7 +178,7 @@ export default function Home() {
                     width={18}
                     height={14}
                     className="dots"
-                    style={{ paddingRight: 8 + "px" }}
+                   
                   />
                 </td>
               </tr>
@@ -191,7 +200,7 @@ export default function Home() {
                     width={18}
                     height={14}
                     className="dots"
-                    style={{ paddingRight: 8 + "px" }}
+                   
                   />
                 </td>
               </tr>
@@ -213,7 +222,7 @@ export default function Home() {
                     width={18}
                     height={14}
                     className="dots"
-                    style={{ paddingRight: 8 + "px" }}
+                  
                   />
                 </td>
               </tr>
@@ -235,7 +244,7 @@ export default function Home() {
                     width={18}
                     height={14}
                     className="dots"
-                    style={{ paddingRight: 8 + "px" }}
+                    // style={{ paddingRight: 8 + "px" }}
                   />
                 </td>
               </tr>
