@@ -63,7 +63,6 @@ class buttons extends Component {
               this.state.results.map(
                 (result, i) => (
                   <Buttonupdate key={i} name={result.widgetName} id={result.widgetId} hiddenEl={this.hiddenEl.bind(this)}/>
-                 
                   )
                 )
               
