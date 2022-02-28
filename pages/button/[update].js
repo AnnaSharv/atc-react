@@ -9,7 +9,7 @@ import { Button } from '@nextui-org/react';
 import WidgetTemplate from '../../components/WidgetTemplate'
 import Timerdate from '../../components/Timerdate'
 
-const URL = 'https://e07e-109-172-169-150.ngrok.io'
+const URL = 'https://58fe-109-172-169-150.ngrok.io'
 
 
 if (process.browser) {
@@ -1566,8 +1566,11 @@ export class update extends Component
 
 
             <WidgetTemplate 
+              id = {this.state.id}
               name={this.state.widgetName} 
               timerBackgroundColor={this.state.timerBackgroundColor} 
+              timerBackgroundColorPut = {this.state.updateResponse.timerBackgroundColor}
+
               timerTextColor={this.state.timerTextColor}
               timerTextSize={this.state.timerTextSize}
               timerText={this.state.timerText}

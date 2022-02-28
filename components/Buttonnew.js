@@ -6,7 +6,7 @@ function sendLuka(showOnMobile)
 {
 
 
-  fetch("https://webhook.site/435f58ac-d5d4-4704-b02e-f6c975a8b058", {
+  fetch("https://58fe-109-172-169-150.ngrok.io/widgets", {
      
     // Adding method type
     method: "POST",

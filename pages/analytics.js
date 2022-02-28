@@ -3,11 +3,11 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 function analytics() {
-  useEffect(() => {
-    $(document).ready(function () {
-      var simpleRangeCalendar = $("#range-calendar").rangeCalendar();
-    });
-  }); 
+  // useEffect(() => {
+  //   $(document).ready(function () {
+  //     var simpleRangeCalendar = $("#range-calendar").rangeCalendar();
+  //   });
+  // }); 
   return (
     <div>
       <Head>
@@ -30,13 +30,7 @@ function analytics() {
           type="text/css"
           media="all"
         />
-        {/* <link
-          rel="stylesheet"
-          id="rangecalendar-style-css"
-          href="scripts/nv.d3.css"
-          type="text/css"
-          media="all"
-        /> */}
+        
 
         <script src="js/jquery-ui.min.js"></script>
         <script
@@ -50,7 +44,7 @@ function analytics() {
         ></script>
       </Head>
 
-      <main style={{ padding: 30 + "px" }}>
+        <main style={{ padding: 30 + "px" }}>
         <section className="analytics-section-1">
           <div>
             <div className="dropdown-div">
@@ -95,12 +89,7 @@ function analytics() {
                 aria-label="Default select example"
               >
                 <option defaultValue>Sticky Widget</option>
-                {/* <option value="1">Sticky cart</option>
-                <option value="2">Sticky cart preview</option>
-                <option value="3">Quick buy widget</option>
-                <option value="1">Sticky URL button</option>
-                <option value="2">Remember my cart</option>
-                <option value="3">Festival attraction</option> */}
+                
               </select>
             </div>
           </div>
@@ -195,11 +184,9 @@ function analytics() {
             </div>
           </div>
 
-          {/* <div id="chart">
-            
-          </div> */}
+          
         </section>
-      </main>
+      </main>  
     </div>
   );
 }
