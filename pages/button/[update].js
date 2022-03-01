@@ -9,7 +9,7 @@ import { Button } from '@nextui-org/react';
 import WidgetTemplate from '../../components/WidgetTemplate'
 import Timerdate from '../../components/Timerdate'
 
-const URL = 'https://58fe-109-172-169-150.ngrok.io'
+const URL = 'https://9630-95-137-233-63.ngrok.io'
 
 
 if (process.browser) {
@@ -173,21 +173,21 @@ export class update extends Component
             showVariants:true,
             showQuantity:false,
             showOutOfStocks:false,
-            borderBackgroundColor: "#0083f8", 
+            borderBackgroundColor: "#133b5e", 
             borderHeight: 10,
             borderAnimation:"", // select
             borderSpeedOfAnimation:2, // aq stringi giweria da num ar unda modiodes?
             showLoopAnimation:false,
-            buyButtonColor:"#0083f8",
+            buyButtonColor:"#779438",
             buyButtonShape:"", //select
-            buyButtonText:"", // empty str default
+            buyButtonText:"Add to Cart", // empty str default
             showStatusDesktop:true,
            //bar alignment
-            widgetPositions:"",
+            widgetPositions:"center",
             barAlignment:"",
             //timer
             showUrgencyTime: true,
-            timerdate:"",  // es num unda iyos
+            timerdate:'30:00',  // es num unda iyos
             timerText: "Hurry up! Sale ends in",
             timerBackgroundColor: "#0083f8",
             timerTextSize: 14,
@@ -318,7 +318,7 @@ export class update extends Component
       .then(res => this.setState({updateResponse:res}))
       .catch(error => console.log('error', error));
   }
-     
+    
     static getInitialProps({query}) {
       return {query}
     }
@@ -496,7 +496,6 @@ export class update extends Component
             </div>
             <form className="tab-content my-sidebar-right" id="v-pills-tabContent" 
                   noValidate 
-                  // className="was-validated"
                   method="POST"
                   action={`${URL}/widget` }
                   onSubmit={this.sendData}
@@ -563,7 +562,7 @@ export class update extends Component
                       </div>
                     </div>
                     <div className="dropdown-div">
-                      <label htmlFor="select">Style</label>
+                      <label htmlFor="select">Choose From Our Default Styles</label>
                       <select
                         className="form-select my-select shadow-none"
                         aria-label="Default select example"
@@ -576,13 +575,13 @@ export class update extends Component
                           choose your style
                         </option>
                         <option defaultValue="Rounded Style">
-                          Rounded Style
+                          STYLE 1
                         </option>
                         <option defaultValue="Two">
-                          Two
+                          STYLE 2
                         </option>
                         <option defaultValue="Three">
-                          Three
+                          STYLE 3
                         </option>
                       </select>
                     </div>
@@ -943,8 +942,11 @@ export class update extends Component
                                 this.setState({borderAnimation:e.target.value})
                                }
                             >
-                              <option defaultValue="bounce" defaultValue>Bounce</option>
-                              <option defaultValue="shake">Shake</option>
+                              <option value='none'>none</option>
+                              <option value="animate__animated animate__bounce " defaultValue>Bounce</option>
+                              <option value="animate__animated animate__shakeX ">Shake</option>
+                              <option value="animate__animated animate__pulse ">Pulse</option>
+                              <option value="animate__animated animate__tada ">Tada</option>
                             </select>
                             <label
                               className="form-check-label"
@@ -953,8 +955,8 @@ export class update extends Component
                               Border Animation:
                             </label>
                           </div>
-                          <div className="form-check form-switch show-settings-div">
-                            <input
+                          <div className="form-check form-switch show-settings-div show-settings-div-animation">
+                            {/* <input
                               className=" shadow-none"
                               type="number"
                               id="input-size"
@@ -964,7 +966,23 @@ export class update extends Component
                               onChange={(e) =>
                                 this.setState({borderSpeedOfAnimation:e.target.value})
                                }
-                            ></input>
+                            ></input> */}
+                            <select
+                              name="borderSpeedOfAnimation"
+                              className="form-select-sm"
+                              aria-label="Default select example"
+                              defaultValue={this.state.id === 'create' ? this.state.borderSpeedOfAnimation : this.state.updateResponse.borderSpeedOfAnimation}
+                              onChange={(e) =>
+                                this.setState({borderSpeedOfAnimation:e.target.value})
+                               }
+                              
+                            >
+                              <option value='default'>default (1s)</option>
+                              <option value="animate__animated animate__slow " >Slow</option>
+                              <option value="animate__animated animate__fast ">Fast</option>
+                              <option value="animate__animated animate__slower ">Slower</option>
+                              <option value="animate__faster ">Faster</option>
+                            </select>
                             <label
                               className="form-check-label"
                               htmlFor="flexSwitchCheckChecked"
@@ -1047,9 +1065,9 @@ export class update extends Component
                                   this.setState({buyButtonShape:e.target.value})
                                  }
                               >
-                                <option defaultValue="Curved" defaultValue>Curved</option>
-                                <option defaultValue="Rounder">Rounder</option>
-                                <option defaultValue="Solid">Solid</option>
+                                <option value={5} defaultValue>Curved</option>
+                                <option value={50}>Rounder</option>
+                                <option value={0}>Solid</option>
                               </select>
                               <label
                                 className="form-check-label"
@@ -1106,8 +1124,9 @@ export class update extends Component
                           defaultValue={this.state.id === 'create' ? this.state.widgetPositions : this.state.updateResponse.widgetPositions}
                           onChange={(e) => this.setState({ widgetPositions:e.target.value })  }
                         >
-                          <option defaultValue="Top" defaultValue>Top</option>
-                          <option defaultValue="Bottom">Bottom</option>
+                          <option value="" >Choose position</option>
+                          <option value="flex-start" >Top</option>
+                          <option value="flex-end">Bottom</option>
                           
                         </select>
                         <label
@@ -1171,6 +1190,7 @@ export class update extends Component
                                       showUrgencyTime:!prevState.showUrgencyTime //zemot maqvs datruebuli 
                                     }))
                                 }
+                                
                           />
                           <label
                             className="form-check-label"
@@ -1230,7 +1250,7 @@ export class update extends Component
                                 id="choose-color-value"
                                 className="choose-color-value-timerBGcolor"
                               >
-                                {this.state.timerBackgroundColor}
+                               {this.state.id === 'create' ? this.state.timerBackgroundColor : this.state.updateResponse.timerBackgroundColor} 
                               </label>
                               <input
                                 type="color"
@@ -1568,12 +1588,23 @@ export class update extends Component
             <WidgetTemplate 
               id = {this.state.id}
               name={this.state.widgetName} 
+
+              borderAnimation = {this.state.borderAnimation}
+               
               timerBackgroundColor={this.state.timerBackgroundColor} 
               timerBackgroundColorPut = {this.state.updateResponse.timerBackgroundColor}
 
               timerTextColor={this.state.timerTextColor}
+              timerTextColorPut={this.state.updateResponse.timerTextColor}
+
               timerTextSize={this.state.timerTextSize}
+              timerTextSizePut={this.state.updateResponse.timerTextSize}
+
               timerText={this.state.timerText}
+              timerTextPut={this.state.updateResponse.timerText}
+
+              timerdate={this.state.timerdate}
+              timerdatePut={this.state.updateResponse.timerdate}
 
               showProductImage={this.state.showProductImage}
               showProductName={this.state.showProductName}
@@ -1583,6 +1614,19 @@ export class update extends Component
               showOutOfStocks={this.state.showOutOfStocks}
 
               showUrgencyTime={this.state.showUrgencyTime}
+              showUrgencyTimePut={this.state.updateResponse.showUrgencyTime}
+
+              buyButtonText = {this.state.buyButtonText}
+              buyButtonTextPut = {this.state.updateResponse.buyButtonText}
+
+              borderBackgroundColor = {this.state.borderBackgroundColor}
+              borderBackgroundColorPut = {this.state.updateResponse.borderBackgroundColor}
+
+              showLoopAnimation = {this.state.showLoopAnimation}
+              borderSpeedOfAnimation = {this.state.borderSpeedOfAnimation}
+              buyButtonColor = {this.state.buyButtonColor}
+              buyButtonShape = {this.state.buyButtonShape} 
+              widgetPositions = {this.state.widgetPositions}
 
               // showProductImage={this.state.showProductImage}
               // showProductImage={this.state.showProductImage}

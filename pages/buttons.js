@@ -17,7 +17,7 @@ class buttons extends Component {
 
   componentDidMount = async () =>
   {
-    const URL = 'https://58fe-109-172-169-150.ngrok.io/widgets'
+    const URL = 'https://9630-95-137-233-63.ngrok.io/widgets'
     const res = await fetch(URL);
     const data = await res.json()
 

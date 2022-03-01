@@ -21,7 +21,7 @@ class Buttonupdate extends Component
     del = async () => {
         let myid = this.props.id
         this.props.hiddenEl(myid)
-        const URL = 'https://58fe-109-172-169-150.ngrok.io'
+        const URL = 'https://9630-95-137-233-63.ngrok.io'
 
         
         

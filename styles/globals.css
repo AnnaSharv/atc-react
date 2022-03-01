@@ -23,9 +23,8 @@ body {
 /* template rendern */
 .buttons-content {
     padding:20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex;
+    justify-content: center; */
 }
 /* add input btn  */
 .pagesToShowDeleteBtn {

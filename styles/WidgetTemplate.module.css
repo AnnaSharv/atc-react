@@ -1,8 +1,13 @@
 .widgetTemplate {
-    width:80%;
-    background-color: #d1b3c4;
+    /* width:100%;
+    height: fit-content !important; */
+    height:fit-content;
 }
 
+.container {
+    display: flex;
+    height: 100%;
+}
 .widgetTemplateBorder {
      /* background-color: #7928ca; */
     padding:10px;  

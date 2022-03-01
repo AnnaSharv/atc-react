@@ -46,3 +46,9 @@
     showMediaIconsLinkedin: Boolean,
     showMediaIconsPinterest: Boolean,
     showMediaIconsTumblr: Boolean,
+
+
+
+
+    !!
+    widgetPositions:Number !!!
